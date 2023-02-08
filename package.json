@@ -6,6 +6,7 @@
     "docs",
     "core",
     "demo",
+    "demo-vue",
     "integrations/*",
     "packages/*",
     "extensions/*"
