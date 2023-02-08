@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+		"jsx": "preserve",
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "outDir": "./dist"
+  },
+  "include": ["./vite-env.d.ts", "./**/*.ts", "./**/*.d.ts", "./**/*.vue", "test"],
+  "exclude": ["./dist"]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "@stackflow/plugin-basic-ui-vue",
+  "version": "0.21.3",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./index.css": "./dist/index.css"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "yarn build:js && yarn build:dts",
+    "build:dts": "tsc --emitDeclarationOnly",
+    "build:js": "node ./esbuild.config.js",
+    "clean": "rimraf dist",
+    "dev": "yarn build:js --watch && yarn build:dts --watch"
+  },
+  "dependencies": {
+    "@vanilla-extract/dynamic": "^2.0.2",
+    "@vanilla-extract/private": "^1.0.3",
+    "@vanilla-extract/recipes": "^0.2.5",
+    "ts-pattern": "^4.0.5"
+  },
+  "devDependencies": {
+    "@stackflow/core": "^0.21.1",
+    "@stackflow/esbuild-config": "^0.20.0",
+    "@stackflow/eslint-config": "^0.20.0",
+    "@stackflow/vue": "^0.21.3",
+    "@testing-library/dom": "^8.20.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^14.4.3",
+    "@testing-library/vue": "^6.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "@vanilla-extract/css": "^1.7.2",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/coverage-c8": "^0.28.4",
+    "esbuild": "^0.14.51",
+    "esbuild-plugin-vue3": "^0.3.2",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jsdom": "^21.1.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.4",
+    "vite": "^4.1.1",
+    "vitest": "^0.28.4",
+    "vue": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@stackflow/core": "0",
+    "@stackflow/vue": "0",
+    "vue": ">=3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "ultra": {
+    "concurrent": [
+      "dev",
+      "build"
+    ]
+  }
+}
