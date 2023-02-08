@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+		"skipLibCheck": true,
+		"paths": {
+			"react": ["stub/empty.d.ts"]
+		}
+  },
+  "exclude": ["./dist"]
+}
